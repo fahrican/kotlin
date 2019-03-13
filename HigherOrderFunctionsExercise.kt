@@ -16,10 +16,8 @@ fun main(args: Array<String>) {
 fun List<Int>.divisibleBy(block: (Int) -> Int): List<Int> {
 
     val result = mutableListOf<Int>()
-    for (item in this) {
-        if (block(item) == 0) {
-            result.add(item)
-        }
-    }
+    
+    this.forEach { it -> if (block(it) == 0) result.add(it) }
+    
     return result
 }
