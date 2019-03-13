@@ -8,9 +8,7 @@ fun main(args: Array<String>) {
     When the lambda returns zero, include the item in the output. For example, this list:
      */
     val numbers = listOf<Int>(1, 2, 3, 4, 5, 6, 7, 8, 9, 0)
-    print(numbers.divisibleBy {
-        it.rem(3)
-    })
+    print(numbers.divisibleBy { it.rem(3) })
 }
 
 fun List<Int>.divisibleBy(block: (Int) -> Int): List<Int> {
